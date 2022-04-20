@@ -1,8 +1,15 @@
-body {
+:root {
+  --green: #00FF00;
+  --white: #ffffff;
+  --black: #000000;
+}
+* {
   font-family: 'Courier New', monospace;
+  background: var(--bg);
+  color: var(--fontColor);
+}
+body {
   text-align:center;
-  background-color: black;
-  color: lightgrey;
 }
 li {
   list-style: circle;
@@ -16,6 +23,10 @@ li {
   font-family: monospace;
 }
 .light-theme {
-  color: #000000;
-  background: #FFFFFF;
+  --bg: var(--white);
+  --fontColor: var(--black);
+}
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--lightgrey);
 }
